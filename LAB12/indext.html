@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My CV</title>
+
+  <!-- Only custom styling (as your instructions require) -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="name">My CV</h1>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#memory-game">Memory Game</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>Write your short bio here.</p>
+    </section>
+
+    <!-- ✅ MEMORY GAME SECTION -->
+    <section id="memory-game" class="section memory-game-section">
+      <h2>Memory Game</h2>
+      <p>Flip cards, find matching pairs. Choose difficulty and press Start.</p>
+
+      <div class="memory-game-ui">
+        <div class="memory-controls">
+          <label for="mg-difficulty">Difficulty:</label>
+          <select id="mg-difficulty" class="mg-select">
+            <option value="easy" selected>Easy (4×3)</option>
+            <option value="hard">Hard (6×4)</option>
+          </select>
+
+          <button type="button" id="mg-start" class="mg-btn">Start</button>
+          <button type="button" id="mg-restart" class="mg-btn mg-btn-secondary" disabled>Restart</button>
+        </div>
+
+        <div class="memory-layout">
+          <div class="memory-board-wrap">
+            <div id="mg-board" class="memory-board" aria-live="polite"></div>
+            <div id="mg-win" class="mg-win" role="status" aria-live="polite"></div>
+          </div>
+
+          <aside class="memory-stats" aria-label="Game stats">
+            <div class="mg-stat"><span>Moves:</span> <strong id="mg-moves">0</strong></div>
+            <div class="mg-stat"><span>Matches:</span> <strong id="mg-matches">0</strong></div>
+
+            <!-- Optional task: timer + best score -->
+            <div class="mg-stat"><span>Time:</span> <strong id="mg-time">00:00</strong></div>
+            <div class="mg-best">
+              <div class="mg-best-title">Best (fewest moves)</div>
+              <div class="mg-best-row">Easy: <strong id="mg-best-easy">—</strong></div>
+              <div class="mg-best-row">Hard: <strong id="mg-best-hard">—</strong></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: you@example.com</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© 2025</small>
+  </footer>
+
+  <!-- Only custom JS (as your instructions require) -->
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
